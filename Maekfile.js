@@ -136,6 +136,7 @@ const game_names = [
 	maek.CPP('Sound.cpp'),
 	maek.CPP('load_wav.cpp'),
 	maek.CPP('load_opus.cpp'),
+	maek.CPP('hb_shaper.cpp'),
 	maek.CPP('TextureProgram.cpp')
 ];
 

@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/../nest-libs/linux/**"
+                "${workspaceFolder}/../nest-libs/linux/**",
+                "/home/kane/gameprogramming/nest-libs/linux/freetype/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

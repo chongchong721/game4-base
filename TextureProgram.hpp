@@ -12,11 +12,12 @@ struct TextureProgram {
 	GLuint program = 0;
 
 	//Attribute (per-vertex variable) locations:
-	GLuint Position_vec4 = -1U;
-	GLuint TexCoord_vec2 = -1U;
+	GLint positionLoc;
+	GLint uvLoc;
 
 	//Uniform (per-invocation variable) locations:
-	GLuint OBJECT_TO_CLIP_mat4 = -1U;
+	//GLuint OBJECT_TO_CLIP_mat4 = -1U;
+	GLuint PROJECTION_mat = -1U;
 
 	//Textures:
 	//TEXTURE0 - texture that is accessed by TexCoord

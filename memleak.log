@@ -1,0 +1,165 @@
+==79352== 22,800 bytes in 34 blocks are definitely lost in loss record 5,233 of 5,273
+==79352==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x153859: HBShaper::updateGlyph(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, float, float) (hb_shaper.cpp:76)
+==79352==    by 0x131B75: PlayMode::update(float) (PlayMode.cpp:241)
+==79352==    by 0x147CC3: main (main.cpp:181)
+==79352== 
+==79352== 23,296 bytes in 28 blocks are possibly lost in loss record 5,234 of 5,273
+==79352==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6CF20F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF20B8: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF20B8: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC7208: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CA03D1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352== 
+==79352== 34,692 (80 direct, 34,612 indirect) bytes in 1 blocks are definitely lost in loss record 5,244 of 5,273
+==79352==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x130E00: PlayMode::PlayMode() (PlayMode.cpp:134)
+==79352==    by 0x149784: void __gnu_cxx::new_allocator<PlayMode>::construct<PlayMode>(PlayMode*) (new_allocator.h:162)
+==79352==    by 0x14956A: void std::allocator_traits<std::allocator<PlayMode> >::construct<PlayMode>(std::allocator<PlayMode>&, PlayMode*) (alloc_traits.h:516)
+==79352==    by 0x149237: std::_Sp_counted_ptr_inplace<PlayMode, std::allocator<PlayMode>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<>(std::allocator<PlayMode>) (shared_ptr_base.h:519)
+==79352==    by 0x148E35: std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<PlayMode, std::allocator<PlayMode>>(PlayMode*&, std::_Sp_alloc_shared_tag<std::allocator<PlayMode> >) (shared_ptr_base.h:650)
+==79352==    by 0x148C27: std::__shared_ptr<PlayMode, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<PlayMode>>(std::_Sp_alloc_shared_tag<std::allocator<PlayMode> >) (shared_ptr_base.h:1342)
+==79352==    by 0x1489CC: std::shared_ptr<PlayMode>::shared_ptr<std::allocator<PlayMode>>(std::_Sp_alloc_shared_tag<std::allocator<PlayMode> >) (shared_ptr.h:409)
+==79352==    by 0x148605: std::shared_ptr<PlayMode> std::allocate_shared<PlayMode, std::allocator<PlayMode>>(std::allocator<PlayMode> const&) (shared_ptr.h:863)
+==79352==    by 0x1481E2: std::shared_ptr<PlayMode> std::make_shared<PlayMode>() (shared_ptr.h:879)
+==79352==    by 0x1477EA: main (main.cpp:115)
+==79352== 
+==79352== 62,416 bytes in 8 blocks are possibly lost in loss record 5,256 of 5,273
+==79352==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6C8D2A2: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6C9071B: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6C90A7A: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6C90C61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x64A1BC7: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x64F17CA: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x4F1BB42: start_thread (pthread_create.c:442)
+==79352==    by 0x4FACBB3: clone (clone.S:100)
+==79352== 
+==79352== 63,232 bytes in 19 blocks are possibly lost in loss record 5,258 of 5,273
+==79352==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6CF20F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC7208: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC75B7: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6668552: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6668E8A: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x666DDF2: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x1544CA: HBShaper::uploadMeshes(std::vector<std::shared_ptr<FontMesh>, std::allocator<std::shared_ptr<FontMesh> > >) (hb_shaper.cpp:206)
+==79352==    by 0x132420: PlayMode::draw_fontmesh(std::vector<std::shared_ptr<FontMesh>, std::allocator<std::shared_ptr<FontMesh> > >) (PlayMode.cpp:373)
+==79352==    by 0x132189: PlayMode::draw(glm::vec<2, unsigned int, (glm::qualifier)0> const&) (PlayMode.cpp:323)
+==79352== 
+==79352== 70,208 bytes in 1,097 blocks are possibly lost in loss record 5,262 of 5,273
+==79352==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6CF1FFB: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC7208: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC75B7: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6668552: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6668E8A: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x666DDF2: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x15445A: HBShaper::uploadMeshes(std::vector<std::shared_ptr<FontMesh>, std::allocator<std::shared_ptr<FontMesh> > >) (hb_shaper.cpp:202)
+==79352==    by 0x132420: PlayMode::draw_fontmesh(std::vector<std::shared_ptr<FontMesh>, std::allocator<std::shared_ptr<FontMesh> > >) (PlayMode.cpp:373)
+==79352==    by 0x132189: PlayMode::draw(glm::vec<2, unsigned int, (glm::qualifier)0> const&) (PlayMode.cpp:323)
+==79352== 
+==79352== 109,824 bytes in 33 blocks are possibly lost in loss record 5,266 of 5,273
+==79352==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6CF20F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF20B8: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC7208: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC75B7: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6668552: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6668E8A: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x666DDF2: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352== 
+==79352== 403,768 bytes in 50,471 blocks are possibly lost in loss record 5,267 of 5,273
+==79352==    at 0x48487A9: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6CF540B: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF5711: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF58C5: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x64A1BC7: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x64F17CA: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x4F1BB42: start_thread (pthread_create.c:442)
+==79352==    by 0x4FACBB3: clone (clone.S:100)
+==79352== 
+==79352== 463,360 bytes in 7,240 blocks are possibly lost in loss record 5,268 of 5,273
+==79352==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6CF1FFB: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC7208: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CA03D1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CA1047: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x65674E4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6541DC4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x654314B: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6544DAC: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x651C0C3: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352== 
+==79352== 752,128 bytes in 226 blocks are possibly lost in loss record 5,270 of 5,273
+==79352==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6CF20F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF20B8: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC7208: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CA03D1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CA1047: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x65674E4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6541DC4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352== 
+==79352== 1,527,760 bytes in 7,240 blocks are possibly lost in loss record 5,271 of 5,273
+==79352==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6CF20F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC7208: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CA03D1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CA1047: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x65674E4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6541DC4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x654314B: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6544DAC: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x651C0C3: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352== 
+==79352== 3,650,816 bytes in 1,097 blocks are possibly lost in loss record 5,272 of 5,273
+==79352==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==79352==    by 0x6CF20F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6FEFEE1: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CF1E61: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC7208: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6CC75B7: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6668552: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x6668E8A: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x666DDF2: ??? (in /usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so)
+==79352==    by 0x15445A: HBShaper::uploadMeshes(std::vector<std::shared_ptr<FontMesh>, std::allocator<std::shared_ptr<FontMesh> > >) (hb_shaper.cpp:202)
+==79352==    by 0x132420: PlayMode::draw_fontmesh(std::vector<std::shared_ptr<FontMesh>, std::allocator<std::shared_ptr<FontMesh> > >) (PlayMode.cpp:373)
+==79352==    by 0x132189: PlayMode::draw(glm::vec<2, unsigned int, (glm::qualifier)0> const&) (PlayMode.cpp:323)
+==79352== 
+==79352== LEAK SUMMARY:
+==79352==    definitely lost: 25,464 bytes in 103 blocks
+==79352==    indirectly lost: 34,612 bytes in 112 blocks
+==79352==      possibly lost: 7,255,019 bytes in 69,944 blocks
+==79352==    still reachable: 34,986,467 bytes in 10,585 blocks
+==79352==                       of which reachable via heuristic:
+==79352==                         multipleinheritance: 24,000 bytes in 35 blocks
+==79352==         suppressed: 0 bytes in 0 blocks
+==79352== Reachable blocks (those to which a pointer was found) are not shown.
+==79352== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==79352== 
+==79352== For lists of detected and suppressed errors, rerun with: -s
+==79352== ERROR SUMMARY: 53767 errors from 235 contexts (suppressed: 0 from 0)

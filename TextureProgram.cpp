@@ -11,7 +11,7 @@ Load< TextureProgram > texture_program(LoadTagEarly, []() -> TextureProgram cons
 	//----- build the pipeline template -----
 	texture_program_pipeline.program = ret->program;
 
-	texture_program_pipeline.OBJECT_TO_CLIP_mat4 = ret->OBJECT_TO_CLIP_mat4;
+	//texture_program_pipeline.OBJECT_TO_CLIP_mat4 = ret->OBJECT_TO_CLIP_mat4;
 
 	//make a 1-pixel white texture to bind by default:
 	GLuint tex;
@@ -33,43 +33,51 @@ Load< TextureProgram > texture_program(LoadTagEarly, []() -> TextureProgram cons
 	return ret;
 });
 
+//try to modify the texture program
+//https://learnopengl.com/In-Practice/Text-Rendering
+//https://github.com/tangrams/harfbuzz-example/blob/master/src/glutils.h
+
+
 TextureProgram::TextureProgram() {
 	//Compile vertex and fragment shaders using the convenient 'gl_compile_program' helper function:
 	program = gl_compile_program(
 		//vertex shader:
 		"#version 330\n"
-		"uniform mat4 OBJECT_TO_CLIP;\n"
-		"in vec4 Position;\n"
-		"in vec2 TexCoord;\n"
-		"out vec2 texCoord;\n"
-		"void main() {\n"
-		"	gl_Position = OBJECT_TO_CLIP * Position;\n"
-		"	texCoord = TexCoord;\n"
-		"}\n"
-	,
-		//fragment shader:
+		"uniform mat4 projection;\n"
+		"in vec4 a_position;\n"
+        "in vec2 a_uv;\n"
+        "out vec2 f_uv;\n"
+        "void main() {\n"
+        "	gl_Position = projection * a_position;\n"
+        "	f_uv = a_uv;\n"
+        "}\n",
+
+		// Fragment
 		"#version 330\n"
-		"uniform sampler2D TEX;\n"
-		"in vec2 texCoord;\n"
 		"out vec4 fragColor;\n"
-		"void main() {\n"
-		"	fragColor = texture(TEX, texCoord);\n"
-		"}\n"
+		"uniform sampler2D u_tex;\n"
+        "in vec2 f_uv;\n"
+        "void main() {\n"
+        "    fragColor = vec4(1.0,1.0,1.0, texture(u_tex, f_uv).w);\n"
+        "}\n"
+		
 	);
 	//As you can see above, adjacent strings in C/C++ are concatenated.
 	// this is very useful for writing long shader programs inline.
 
 	//look up the locations of vertex attributes:
-	Position_vec4 = glGetAttribLocation(program, "Position");
-	TexCoord_vec2 = glGetAttribLocation(program, "TexCoord");
+	//Vertex_vec4 = glGetAttribLocation(program, "vertex");
+	positionLoc = glGetAttribLocation(program,"a_position");
+	uvLoc = glGetAttribLocation(program,"a_uv");
 
 	//look up the locations of uniforms:
-	OBJECT_TO_CLIP_mat4 = glGetUniformLocation(program, "OBJECT_TO_CLIP");
+	PROJECTION_mat = glGetUniformLocation(program,"projection");
+	GLuint TEX_sampler2D = glGetUniformLocation(program, "u_tex");
 
-	GLuint TEX_sampler2D = glGetUniformLocation(program, "TEX");
 
 	//set TEX to always refer to texture binding zero:
 	glUseProgram(program); //bind program -- glUniform* calls refer to this program now
+
 
 	glUniform1i(TEX_sampler2D, 0); //set TEX to sample from GL_TEXTURE0
 

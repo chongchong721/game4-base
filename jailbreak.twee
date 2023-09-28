@@ -1,0 +1,106 @@
+:: StoryTitle
+jailbreak
+
+
+:: StoryData
+{
+  "ifid": "4641B3B8-D304-49B0-BF70-B93B950BA12A",
+  "format": "Harlowe",
+  "format-version": "3.3.7",
+  "start": "Wake Up",
+  "zoom": 1
+}
+
+
+:: Bar {"position":"1300,975","size":"100,100"}
+The relic is broken, but Iron bars are also broken by the force. A few of them impaled the jailer just in time, you walked out and found the jailer dead, you found the key on him and managed to escape.
+
+[[You Escape!]]
+
+
+:: Check yourself {"position":"1025,750","size":"100,100"}
+You find that the treasure you acquired before you lost consciousness is still with you. It seems to have some strong power. Maybe you can utilize it. Suddenly The jailer comes towards you and he says to you that whatever you found is now theirs. He tells you to hand them over quickly, or else.. He sneered.
+
+[[You decide to hand in]]
+[[You pretend to hand in but you're planning to do something else 1]]
+[[You pretend to hand in but you're planning to do something else 2]]
+
+
+:: You pretend to hand in but you're planning to do something else 1 {"position":"1025,875","size":"100,100"}
+You take out your blade, the blade seems to have its own will.
+
+[[You decide to stab the jailer]]
+[[You decide to trust the blade, just hand in the blade]]
+
+
+
+:: You pretend to hand in but you're planning to do something else 2 {"position":"1025,875","size":"100,100"}
+You take out your relic, you use your magic to conenct to the relic. The relics made strange noises. Emitting a powerful force, you try to direct this force to shoot at the
+
+[[Bar]]
+[[Jailer]]
+
+
+
+:: Jailer {"position":"1150,1000","size":"100,100"}
+The relic is broken. The Jailer get evaporated by the force. But since the relic is broken, you have no way out.
+
+[[You Fail!]]
+
+
+:: Speak to the jailer {"position":"900,750","size":"100,100"}
+The jailer comes towards you and he says to you that whatever you found is now theirs. He tells you to hand them over quickly, or else.. He sneered.
+
+[[You decide to hand in]]
+
+
+:: Wake Up {"position":"900,375","size":"100,100"}
+You wake up in prison and you're the only one in the cell. Suddenly, you hear someone talking, and it turns out to be the jailer in the hallway outside your cell. You don't know why you're here, you can't even remember who you are, and you're trying to recall who you are.
+
+[[You're a thief]]
+[[You're a magician]]
+
+
+:: You Escape! {"position":"625,1300","size":"100,100"}
+You successfully escape. Congrats!
+
+
+:: You Fail! {"position":"625,1075","size":"100,100"}
+You fail to escape. You will die in the jail.
+
+
+:: You decide to hand in {"position":"900,875","size":"100,100"}
+You take out your treasure item. And walk close to the iron bars. You give it to the jailer. The jailer is laughing, he draw his sword and stab you.
+
+[[You Fail!]]
+
+
+:: You decide to stab the jailer {"position":"975,1200","size":"100,100"}
+The blade is for thief, not for assassin. It can not harm the jailer. The jailer draws his sword and stabs you.
+
+[[You Fail!]]
+
+
+:: continue {"position":"1025,625","size":"100,100"}
+What are you planning to do now?
+
+[[Check yourself]]
+[[Speak to the jailer]]
+
+
+:: You're a magician {"position":"1025,500","size":"100,100"}
+You are a powerful mage, and a few hours ago, you were exploring the ancient ruins on your own. You found a fragment of an ancient holy relic, and as you held it in your hands, you lost consciousness. Now, all you have to do is escape.
+
+[[continue]]
+
+
+:: You decide to trust the blade, just hand in the blade {"position":"1100,1150","size":"100,100"}
+The jailer take the blade. But he does not realize the Blade cut off his key and gives the key to you. He walked away happily. When he is out of your sight, the blade just mysteriously returns to you.
+
+[[You Escape!]]
+
+
+:: You're a thief {"position":"900,500","size":"100,100"}
+You are a master thief. A few hours ago you were at the armory and you stole the famous Blades of Chaos, one of the legendary blades for thief. When you took it in your hands, you lost consciousness. Now your goal is to escape.
+
+[[continue]]
